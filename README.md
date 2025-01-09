@@ -27,6 +27,7 @@ Copy code
 sfdx auth:web:login --setdefaultdevhubusername
 This opens a browser for login. Log in with your Salesforce Developer Edition credentials.
 Your Dev Hub is now connected to the Salesforce CLI.
+
 3. Create a Salesforce DX Project
 In VS Code, open the terminal and run:
 bash
@@ -37,6 +38,7 @@ bash
 Copy code
 cd DreamhouseApp
 code .
+
 4. Create a Scratch Org
 Open the config/project-scratch-def.json file in your project and define the scratch org features:
 
@@ -58,6 +60,7 @@ Open the scratch org to verify:
 bash
 Copy code
 sfdx force:org:open
+
 5. Set Up the Dreamhouse App Metadata
 Clone the Dreamhouse Repo:
 
@@ -72,17 +75,20 @@ Push the Metadata to the Scratch Org:
 bash
 Copy code
 sfdx force:source:push
+
 6. Assign Permission Sets
 Assign the required permission set to your scratch org user:
 bash
 Copy code
 sfdx force:user:permset:assign --permsetname Dreamhouse
-7. Import Sample Data
+
+8. Import Sample Data
 Import sample data for the app:
 bash
 Copy code
 sfdx force:data:tree:import --plan data/sample-data-plan.json
-8. Test the App
+
+9. Test the App
 Open the scratch org in your browser:
 bash
 Copy code
